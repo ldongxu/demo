@@ -1,6 +1,5 @@
 package com.ldongxu.learn;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class AsList_Test {
     }
 
     /**
-     *  避免使用基本数据类型数组转换为列表
+     *  避免使用基本数据类型数组转换为List
      */
     public static void asListIntsPara() {
         int[] ints = {1, 2, 2, 1, 3};

@@ -25,6 +25,14 @@ public class Person implements Serializable{
         this.email = email;
     }
 
+    public void test(){
+        final Email e = this.email;
+        e.setContent("fasfs");
+        System.out.println(e.getContent());
+        System.out.println(this.email.getContent());
+
+    }
+
     public static class Email implements Serializable{
         private String content;
 
@@ -54,7 +62,17 @@ public class Person implements Serializable{
     }
 
     public static void main(String[] args) {
+//        testClone();
+        Email email = new Email("请今天上午11：09开会");
+        Person person = new Person();
+        person.setName("测试final引用");
+        person.setEmail(email);
 
+        person.test();
+
+    }
+
+    public static void testClone(){
         Email email = new Email("请今天上午11：09开会");
         Person person = new Person();
         person.setName("刘东旭");
@@ -69,6 +87,13 @@ public class Person implements Serializable{
 
         person1.getEmail().setContent("不用开会啦");
         System.out.println(person1.getName()+"的邮件内容："+person1.getEmail().getContent());
+    }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", email=" + email +
+                '}';
     }
 }

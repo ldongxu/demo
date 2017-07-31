@@ -11,7 +11,7 @@ import java.util.Random;
  * 通过BitSet来检测一个数字是否存在:
  * 现在有5个随机数，随机数的范围在1到10之间。现在要求写出一种算法，将1到10之间没有在随机数中的数求出来.
  */
-public class BitSet_Test {
+public class BitSet_Test{
     public static void main(String[] args) {
         Random random = new Random();
         List<Integer> list = new ArrayList<Integer>();

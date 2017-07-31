@@ -1,23 +1,35 @@
 package com.ldongxu;
 
-
-import com.ldongxu.learn.CloneUtils;
-import com.ldongxu.learn.ConfigUtil;
 import com.ldongxu.learn.Person;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
+import java.lang.reflect.Field;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class App
 {
-    public static void main(String[] args) {
+    private String name;
+    private String age;
+
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(String age) {
+//        this.age = age;
+//    }
+
+    public static void main(String[] args) throws IllegalAccessException {
 //        System.out.println("java_vendor:" + System.getProperty("java.vendor"));
 //        System.out.println("java_vendor_url:"
 //                + System.getProperty("java.vendor.url"));
@@ -63,23 +75,35 @@ public class App
 //
 //        System.out.println(System.getenv());
 
-        System.out.println(0x000000);
 
-        List<Person> list = new ArrayList<>();
-        for (int i=0;i<100;i++){
-            Person person = new Person();
-            person.setName("test"+i);
-            list.add(person);
-        }
-        List<Person> list1 = new ArrayList<>(list);
-       list.get(0).setName("hhhh");
-        System.out.println(list1.size());
 
+//        Class<App> personClass = App.class;
+//        Field[] fields1 = personClass.getDeclaredFields();
+//        App person = new App();
+//        int i=0;
+//        for (Field field:fields1){
+//            System.out.println(field.getType().getName());
+//            System.out.println(field.getType().getSimpleName());
+//            field.setAccessible(true);
+//            field.set(person,""+i++);
+//        }
+//        System.out.println(person.toString());
+//
+
+        String name = App.class.getSimpleName();
+        char front = name.charAt(0);
+        System.out.println(front);
     }
 
+    @Override
+    public String toString() {
+        return "App{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
 
-
-    public static int average(int x,int y){
+    public static int average(int x, int y){
         return (x&y)+((x^y)>>1);
     }
 
