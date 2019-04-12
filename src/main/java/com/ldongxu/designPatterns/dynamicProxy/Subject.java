@@ -1,4 +1,4 @@
-package com.ldongxu.learn.dynamicProxy;
+package com.ldongxu.designPatterns.dynamicProxy;
 
 /**
  * Created by 刘东旭 on 2017/6/21.
