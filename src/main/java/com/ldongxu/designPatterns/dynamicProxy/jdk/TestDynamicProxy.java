@@ -17,10 +17,10 @@ public class TestDynamicProxy {
 
 
         //获取生成的代理对象字节码内容
-        byte[] data = ProxyGenerator.generateProxyClass("$Proxy0",new Class[]{Person.class});
-        FileOutputStream os = new FileOutputStream("$Proxy0.class");
-        os.write(data);
-        os.close();
+//        byte[] data = ProxyGenerator.generateProxyClass("$Proxy0",new Class[]{Person.class});
+//        FileOutputStream os = new FileOutputStream("$Proxy0.class");
+//        os.write(data);
+//        os.close();
 
     }
 }
