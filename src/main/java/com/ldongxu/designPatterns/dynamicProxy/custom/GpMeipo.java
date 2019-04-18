@@ -12,7 +12,7 @@ public class GpMeipo implements GpInvocationHandler {
 
     public Object getInstance(GpPerson gpPerson){
         this.target= gpPerson;
-        return GpProxy.newProxyInstance(new GpCassLoader(),gpPerson.getClass().getInterfaces(),this);
+        return GpProxy.newProxyInstance(new GpClassLoader(),gpPerson.getClass().getInterfaces(),this);
     }
 
     @Override

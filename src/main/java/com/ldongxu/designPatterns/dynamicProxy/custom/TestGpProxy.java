@@ -17,6 +17,6 @@ public class TestGpProxy {
         //6、加载到jvm
 
         GpPerson person = (GpPerson) new GpMeipo().getInstance(new XiaoWang());
-//        person.findLove();
+        person.findLove();
     }
 }
